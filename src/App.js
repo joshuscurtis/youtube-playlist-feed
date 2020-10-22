@@ -6,10 +6,9 @@ const requestOptions = {
   method: "GET",
   redirect: "follow"
 };
-var request = false;
 
 export default function App(props) {
-  const [data, setData] = useState(request);
+  const [data, setData] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -25,11 +24,18 @@ export default function App(props) {
   var row = [];
 
   if (data !== false) {
-    for (var i = 0; i < data.items.length; i++) {
+    for (var i = 1; i < data.items.length; i++) {
       row.push(<Video key={data.items[i].id} data={data.items[i]} />);
     }
-
-    return <div className="App">{row}</div>;
+    var vidSrc =
+      "https://www.youtube.com/embed/" +
+      data.items[0].snippet.resourceId.videoId;
+    return (
+      <div className="App">
+        <iframe title="" width="95%" height="500px" src={vidSrc}></iframe>
+        {row}
+      </div>
+    );
   } else {
     return <h1>loading...</h1>;
   }

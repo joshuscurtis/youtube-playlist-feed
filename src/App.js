@@ -18,7 +18,6 @@ export default function App(props) {
       .then((response) => response.text())
       .then((result) => setData(JSON.parse(result)))
       .catch((error) => console.log("error", error));
-    console.log(data);
     return () => {};
   }, []);
   var row = [];
@@ -32,7 +31,7 @@ export default function App(props) {
       data.items[0].snippet.resourceId.videoId;
     return (
       <div className="App">
-        <iframe title="" width="95%" height="500px" src={vidSrc}></iframe>
+        <iframe title={vidSrc} width="95%" height="500px" src={vidSrc}></iframe>
         {row}
       </div>
     );

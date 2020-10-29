@@ -12,7 +12,7 @@ export default function App(props) {
 
   useEffect(() => {
     fetch(
-      "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails,id,snippet,status&maxResults=200&playlistId=PLr5G1L8pu9wKuRSAx0PxgRdKgzaNRtZHD&prettyPrint=true&key=AIzaSyDGGuqlafRpIDYlE1-8TRhPWO8sw66jGW0",
+      "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails,id,snippet,status&maxResults=200&playlistId=PLr5G1L8pu9wLB7oBlMLUkoXDl3iSyTfgP&prettyPrint=true&key=AIzaSyBNSv_Evl8euENkLqbdP0s_71l7Bd4qs9E",
       requestOptions
     )
       .then((response) => response.text())
@@ -22,7 +22,7 @@ export default function App(props) {
   }, []);
   var row = [];
 
-  if (data !== false) {
+  if (data !== false && data.items[0] !== undefined) {
     for (var i = 1; i < data.items.length; i++) {
       row.push(<Video key={data.items[i].id} data={data.items[i]} />);
     }

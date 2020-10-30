@@ -7,7 +7,7 @@ export default function Video(props) {
 	
   return (
     <div className="Video">
-	        <iframe title={vidSrc} width="25%" height="200px" src={vidSrc}></iframe>
+
       <a
         href={
           "https://www.youtube.com/watch?v=" +
@@ -16,7 +16,7 @@ export default function Video(props) {
       >
         <h1>{props.data.snippet.title}</h1>
 
-        <img alt="" src={props.data.snippet.thumbnails.medium.url} />
+	        <iframe title={vidSrc} width="75%" height="200px" src={vidSrc}></iframe>
       </a>
     </div>
   );

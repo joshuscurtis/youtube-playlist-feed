@@ -12,7 +12,7 @@ export default function App(props) {
 
   useEffect(() => {
     fetch(
-      "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails,id,snippet,status&maxResults=200&playlistId=PLr5G1L8pu9wLB7oBlMLUkoXDl3iSyTfgP&prettyPrint=true&key=AIzaSyBNSv_Evl8euENkLqbdP0s_71l7Bd4qs9E",
+      "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails,id,snippet,status&maxResults=200&playlistId=PLr5G1L8pu9wLB7oBlMLUkoXDl3iSyTfgP&key=AIzaSyAqpbOXLexN-s6JagKJSuunjE6EU4NGitw",
       requestOptions
     )
       .then((response) => response.text())

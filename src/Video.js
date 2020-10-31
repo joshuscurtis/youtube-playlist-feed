@@ -16,7 +16,7 @@ export default function Video(props) {
       >
         <h1>{props.data.snippet.title}</h1>
 
-	        <iframe title={vidSrc} width="75%" height="200px" src={vidSrc}></iframe>
+	        <iframe title={vidSrc} width="90%" height="100%" src={vidSrc}></iframe>
       </a>
     </div>
   );

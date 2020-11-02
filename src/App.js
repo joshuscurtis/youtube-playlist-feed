@@ -31,7 +31,7 @@ export default function App(props) {
 
     function getLatestPubVid(data) {
       if (data !== false && data.items[0] !== undefined) {
-        for (var i = 1; i < data.items.length; i++) {
+        for (var i = 0; i < data.items.length; i++) {
           if (data.items[i].status.privacyStatus === "public") {
             var vidSrc =
               "https://www.youtube.com/embed/" +

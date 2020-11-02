@@ -17,7 +17,7 @@ export default function Video(props) {
 
         <iframe
           title={vidSrc}
-          width="350px"
+          width="300px"
           height="100%"
           src={vidSrc}
         ></iframe>

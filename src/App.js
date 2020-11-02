@@ -24,11 +24,24 @@ export default function App(props) {
 
   if (data !== false && data.items[0] !== undefined) {
     for (var i = 1; i < data.items.length; i++) {
-      row.push(<Video key={data.items[i].id} data={data.items[i]} />);
+      if (data.items[i].status.privacyStatus === "public") {
+        row.push(<Video key={data.items[i].id} data={data.items[i]} />);
+      }
     }
-    var vidSrc =
-      "https://www.youtube.com/embed/" +
-      data.items[0].snippet.resourceId.videoId;
+
+    function getLatestPubVid(data) {
+      if (data !== false && data.items[0] !== undefined) {
+        for (var i = 1; i < data.items.length; i++) {
+          if (data.items[i].status.privacyStatus === "public") {
+            var vidSrc =
+              "https://www.youtube.com/embed/" +
+              data.items[i].snippet.resourceId.videoId;
+            return vidSrc;
+          }
+        }
+      }
+    }
+    var vidSrc = getLatestPubVid(data);
     return (
       <div className="App">
         <iframe title={vidSrc} width="95%" height="500px" src={vidSrc}></iframe>

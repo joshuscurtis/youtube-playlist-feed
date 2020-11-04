@@ -8,7 +8,7 @@ const requestOptions = {
 };
 
 export default function App(props) {
-  const data = {
+  /*const data = {
     kind: "youtube#playlistItemListResponse",
     etag: "_gj5ObBBGQfwOTA9a5Z_ONtkKKw",
     items: [
@@ -206,8 +206,8 @@ export default function App(props) {
       resultsPerPage: 50
     }
   };
-  /*
-  const [data, setData] = useState(backup);
+  */
+  const [data, setData] = useState(false);
   useEffect(() => {
     fetch(
       "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails,id,snippet,status&maxResults=200&playlistId=PLr5G1L8pu9wLB7oBlMLUkoXDl3iSyTfgP&key=AIzaSyC2PHH6rPItP_8PI_gJSEB_ZZIezOQiC5k",
@@ -220,7 +220,7 @@ export default function App(props) {
       });
     return () => { };
   }, []);
-*/
+
   var row = [];
 
   if (data !== false && data.items[0] !== undefined) {

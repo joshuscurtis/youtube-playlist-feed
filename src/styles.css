@@ -5,23 +5,39 @@
   font-family: sans-serif;
   text-align: center;
   width: 100vw;
+  background: rgb(236, 231, 231);
 }
 
 .Video > a > h1 {
   color: #012541;
   font-weight: 800;
   font-size: 1.4em;
-  margin: 0 0 0.2em 0;
   letter-spacing: -1px;
-  margin-bottom: 20px;
+  margin-top: 30px;
   text-decoration: none;
+  width: 100%;
+  background: rgb(236, 231, 231);
+}
+
+.Video > a > h2 {
+  color: #012541;
+  font-weight: 800;
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  text-decoration: none;
+  width: 100%;
+  background: rgb(236, 231, 231);
 }
 
 .Video {
   background: rgb(236, 231, 231);
-  padding: 20px;
-  border: 1px solid #012541;
+  padding: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
 }
 a {
   text-decoration: none !important;
+}
+.prev__vids {
 }

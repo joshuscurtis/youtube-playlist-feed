@@ -13,15 +13,11 @@ export default function Video(props) {
           props.data.snippet.resourceId.videoId
         }
       >
-        <h1>{props.data.snippet.title}</h1>
-
-        <iframe
-          title={vidSrc}
-          width="300px"
-          height="100%"
-          src={vidSrc}
-        ></iframe>
+        <h1>{props.data.snippet.title.split("|")[0]}</h1>
+        <h2>{props.data.snippet.title.split("|")[1]}</h2>
       </a>
+
+      <iframe title={vidSrc} width="280px" height="100%" src={vidSrc}></iframe>
     </div>
   );
 }

@@ -2,9 +2,6 @@ import React from "react";
 import "./styles.css";
 
 export default function Video(props) {
-  var vidSrc =
-    "https://www.youtube.com/embed/" + props.data.snippet.resourceId.videoId;
-
   return (
     <div className="Video">
       <a

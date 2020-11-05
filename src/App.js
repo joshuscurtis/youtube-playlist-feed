@@ -8,7 +8,8 @@ const requestOptions = {
 };
 
 export default function App(props) {
-  /*const data = {
+  /*
+  const data = {
     kind: "youtube#playlistItemListResponse",
     etag: "_gj5ObBBGQfwOTA9a5Z_ONtkKKw",
     items: [
@@ -218,7 +219,7 @@ export default function App(props) {
       .catch((error) => {
         console.log(error);
       });
-    return () => { };
+    return () => {};
   }, []);
 
   var row = [];

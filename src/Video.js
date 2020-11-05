@@ -23,7 +23,7 @@ export default function Video(props) {
   if (date.getDay() < 4) {
     var longDate = days[date.getDay()] + " " + monthNames[date.getMonth()];
   } else {
-    var longDate = date.getDay() + "th " + monthNames[date.getMonth()];
+    longDate = date.getDay() + "th " + monthNames[date.getMonth()];
   }
   return (
     <div className="Video">
